@@ -4,17 +4,18 @@
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
-			 ("melpa-stable" . "http://stable.melpa.org/packages/")))
-                         
+                         ("melpa-stable" . "http://stable.melpa.org/packages/")))
+
 (defvar extra-packages '(
-			 evil
-			 color-theme-sanityinc-solarized
-			 magit
-			 helm
-			 projectile
-			 helm-projectile
-			 project-explorer
-			 ))
+                         evil
+                         color-theme-sanityinc-solarized
+                         magit
+                         helm
+                         projectile
+                         helm-projectile
+                         project-explorer
+                         editorconfig
+                         ))
 
 (defun extra-packages-installed-p ()
   (dolist (p extra-packages)
