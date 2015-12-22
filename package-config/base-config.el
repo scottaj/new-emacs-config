@@ -1,3 +1,20 @@
+;;;; Company Mode
+(add-hook 'after-init-hook 'global-company-mode)
+
+
+
+;;;; Dash integration
+(add-to-list 'load-path "~/.emacs.d/dash-at-point")
+(autoload 'dash-at-point "dash-at-point"
+  "Search the word at point with Dash." t nil)
+
+
+;;;; Editorconfig
+(require 'editorconfig)
+(editorconfig-mode 1)
+
+
+;;;; Evil
 (require 'evil)
 
 ;; Change cursor in different modes.
@@ -16,7 +33,7 @@
 ;; Clear insert state bindings.
 (setcdr evil-insert-state-map nil)
 
-; Don't wait for any other keys after escape is pressed.
+                                        ; Don't wait for any other keys after escape is pressed.
 (setq evil-esc-delay 0)
 
 ;; Make sure escape gets back to normal state and quits things.
@@ -102,36 +119,68 @@
 (define-key evil-normal-state-map (kbd ",u") 'undo-tree-visualize)
 ;; Dash
 (define-key evil-normal-state-map (kbd ",d") 'dash-at-point)
-;; Mustache and handlebars generators
-(evil-declare-key 'normal mustache-mode-map (kbd ",mt") 'mustache-insert-tag)
-(evil-declare-key 'normal mustache-mode-map (kbd ",mb") 'mustache-insert-section)
-(evil-declare-key 'normal mustache-mode-map (kbd ",mv") 'mustache-insert-variable)
-
-;; Test runners/helpers
-;; RSPEC, requires rspec-mode
-(evil-declare-key 'normal ruby-mode-map (kbd ",ss") 'rspec-verify-single)
-(evil-declare-key 'normal ruby-mode-map (kbd ",sv") 'rspec-verify)
-(evil-declare-key 'normal ruby-mode-map (kbd ",sa") 'rspec-verify-all)
-(evil-declare-key 'normal ruby-mode-map (kbd ",st") 'rspec-toggle-example-pendingness)
-(evil-declare-key 'normal ruby-mode-map (kbd ",sg") 'rspec-toggle-spec-and-target)
-(evil-declare-key 'normal rspec-mode-map (kbd ",ss") 'rspec-verify-single)
-(evil-declare-key 'normal rspec-mode-map (kbd ",sv") 'rspec-verify)
-(evil-declare-key 'normal rspec-mode-map (kbd ",sa") 'rspec-verify-all)
-(evil-declare-key 'normal rspec-mode-map (kbd ",st") 'rspec-toggle-example-pendingness)
-(evil-declare-key 'normal rspec-mode-map (kbd ",sg") 'rspec-toggle-spec-and-target)
-
-
-;; CUCUMBER, requires feature-mode
-(evil-declare-key 'normal feature-mode-map (kbd ",sg") 'feature-goto-step-definition)
-(evil-declare-key 'normal feature-mode-map (kbd ",ss") 'feature-verify-scenario-at-pos)
-(evil-declare-key 'normal feature-mode-map (kbd ",sv") 'feature-verify-all-scenarios-in-buffer)
-(evil-declare-key 'normal feature-mode-map (kbd ",sa") 'feature-verify-all-scenarios-in-project)
-
-; Atomic Vim keymap
-(evil-declare-key 'normal rspec-mode-map (kbd ",r") 'rspec-verify)
-(evil-declare-key 'normal rspec-mode-map (kbd ",R") 'rspec-verify-single)
-(evil-declare-key 'normal feature-mode-map (kbd ",R") 'feature-verify-scenario-at-pos)
-(evil-declare-key 'normal feature-mode-map (kbd ",r") 'feature-verify-all-scenarios-in-buffer)
-
 
 (evil-mode)
+
+
+;;;; Flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+
+;;;; Helm
+(global-set-key (kbd "M-x") 'helm-M-x)
+
+
+
+;;;; Hideshow
+(add-hook 'prog-mode-hook (lambda ()
+                            (hs-minor-mode)
+                            (hideshowvis-minor-mode)))
+
+
+
+;;;; Neotree
+(require 'neotree)
+
+(defun shell-cmd (command)
+  "Runs a shell command and then refreshes the Nav window."
+  (interactive "sShell command: ")
+  (neotree-refresh))
+
+(defun neotree-delete ()
+  "Delete and refresh"
+  (interactive)
+  (neotree-delete-node)
+  (neotree-refresh))
+
+(defun neotree-rename ()
+  "Rename and refresh"
+  (interactive)
+  (neotree-rename-node)
+  (neotree-refresh))
+
+(define-key neotree-mode-map (kbd "a") 'ack)
+(define-key neotree-mode-map (kbd "!") 'shell-cmd)
+(define-key neotree-mode-map (kbd "m") 'neotree-rename)
+(define-key neotree-mode-map (kbd "k") 'neotree-delete)
+(define-key neotree-mode-map (kbd "n") 'neotree-create-node)
+(define-key neotree-mode-map (kbd ".") 'neotree-hidden-file-toggle)
+
+
+
+;;;; Projectile
+(projectile-global-mode)
+(setq projectile-enable-caching t)
+(require 'helm-projectile)
+(helm-projectile-on)
+
+
+
+;;;; Theme
+(load-theme 'sanityinc-solarized-dark t)
+
+
+
+;;;; Undo tree
+(global-set-key (kbd "s-z") 'undo-tree-undo)
+(global-set-key (kbd "s-y") 'undo-tree-redo)

@@ -29,6 +29,8 @@
                               nvm
                               tern
                               company-tern
+                              emmet-mode
+                              web-mode
                               ))
 
 (defvar extra-packages (append base-packages
