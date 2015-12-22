@@ -6,19 +6,34 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa-stable" . "http://stable.melpa.org/packages/")))
 
-(defvar extra-packages '(
+(defvar base-packages '(
                          evil
                          color-theme-sanityinc-solarized
                          magit
                          helm
                          projectile
                          helm-projectile
-                         project-explorer
+                         neotree
                          editorconfig
                          hideshowvis
                          company
                          company-statistics
+                         flycheck
                          ))
+
+(defvar javascript-packages '(
+                              js2-mode
+                              js2-refactor
+                              json-mode
+                              nodejs-repl
+                              nvm
+                              tern
+                              company-tern
+                              ))
+
+(defvar extra-packages (append base-packages
+                               javascript-packages
+                        ))
 
 (defun extra-packages-installed-p ()
   (dolist (p extra-packages)

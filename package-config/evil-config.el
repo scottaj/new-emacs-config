@@ -80,7 +80,7 @@
 (define-key evil-visual-state-map (kbd ",/") 'comment-or-uncomment-region-or-line)
 
 ;; File tree navigation window
-(define-key evil-normal-state-map (kbd ",n") 'project-explorer-open)
+(define-key evil-normal-state-map (kbd ",n") 'neotree-toggle)
 
 ;; Prompt for snippet
 ;; REQUIRES Yasnippet

@@ -23,6 +23,7 @@
  '(initial-scratch-message nil)
  '(magit-commit-show-diff nil)
  '(magit-push-always-verify nil)
+ '(make-backup-files nil)
  '(show-paren-mode t)
  '(show-paren-style (quote expression)))
 (custom-set-faces
