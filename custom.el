@@ -9,6 +9,7 @@
  '(custom-safe-themes
    (quote
     ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+ '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(magit-commit-show-diff nil)
  '(magit-push-always-verify nil)
  '(show-paren-mode t)
