@@ -5,12 +5,17 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-auto-complete nil)
+ '(company-auto-complete-chars (quote (32 41 119 46)))
+ '(company-idle-delay 0.2)
+ '(company-statistics-mode t)
  '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
  '(custom-safe-themes
    (quote
     ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(electric-layout-mode nil)
  '(electric-pair-mode t)
+ '(global-company-mode t)
  '(global-linum-mode t)
  '(initial-buffer-choice t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))

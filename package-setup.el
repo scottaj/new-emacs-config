@@ -16,6 +16,8 @@
                          project-explorer
                          editorconfig
                          hideshowvis
+                         company
+                         company-statistics
                          ))
 
 (defun extra-packages-installed-p ()
