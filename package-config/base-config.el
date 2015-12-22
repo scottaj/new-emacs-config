@@ -1,12 +1,7 @@
 ;;;; Company Mode
 (add-hook 'after-init-hook 'global-company-mode)
+(global-set-key (kbd "M-SPC") #'company-complete)
 
-
-
-;;;; Dash integration
-(add-to-list 'load-path "~/.emacs.d/dash-at-point")
-(autoload 'dash-at-point "dash-at-point"
-  "Search the word at point with Dash." t nil)
 
 
 ;;;; Editorconfig
@@ -51,7 +46,6 @@
 (define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
-
 
 ;; Make C-e work in normal and visual mode
 (define-key evil-visual-state-map (kbd "C-e") 'move-end-of-line)

@@ -4,7 +4,9 @@
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
-                         ("melpa-stable" . "http://stable.melpa.org/packages/")))
+                         ("melpa-stable" . "http://stable.melpa.org/packages/")
+                         ("melpa" . "http://melpa.org/packages/")
+                         ))
 
 (defvar base-packages '(
                          evil
@@ -19,6 +21,7 @@
                          company
                          company-statistics
                          flycheck
+                         dash-at-point
                          ))
 
 (defvar javascript-packages '(
@@ -33,8 +36,15 @@
                               web-mode
                               ))
 
+(defvar rust-packages '(
+                        rust-mode
+                        flycheck-rust
+                        racer
+                        ))
+
 (defvar extra-packages (append base-packages
                                javascript-packages
+                               rust-packages
                         ))
 
 (defun extra-packages-installed-p ()
