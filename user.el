@@ -28,6 +28,7 @@
 		 (list (line-beginning-position)
 					 (line-beginning-position 2)))))
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
+(global-set-key (kbd "s-/") 'comment-or-uncomment-region)
 
 
 
