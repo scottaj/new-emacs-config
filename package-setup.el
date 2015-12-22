@@ -15,6 +15,7 @@
                          helm-projectile
                          project-explorer
                          editorconfig
+                         hideshowvis
                          ))
 
 (defun extra-packages-installed-p ()

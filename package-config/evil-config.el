@@ -49,11 +49,15 @@
 ;; Open file
 (define-key evil-normal-state-map (kbd ",e") 'helm-find-files)
 
-;; ;; Jump to file in project
+;; Jump to file in project
 (define-key evil-normal-state-map (kbd ",T") 'helm-semantic-or-imenu)
 (define-key evil-normal-state-map (kbd ", C-t") 'projectile-invalidate-cache)
 (define-key evil-normal-state-map (kbd ",t") 'helm-projectile-find-file)
 (define-key evil-normal-state-map (kbd "C-p") 'helm-show-kill-ring)
+
+;; Code Folding 
+(define-key evil-normal-state-map (kbd ",.") 'hs-toggle-hiding)
+(define-key evil-normal-state-map (kbd ",>") 'hs-hide-all)
 
 ;; Spellcheck
 (define-key evil-normal-state-map (kbd ",ce") 'flyspell-mode)
