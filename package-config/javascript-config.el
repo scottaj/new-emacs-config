@@ -10,6 +10,10 @@
 
 
 
+;;;; Use correct version of node for nvm
+(add-hook 'js2-mode-hook (lambda () (nvm-use-for (projectile-project-root))))
+
+
 ;;;; Emmet
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 (add-hook 'web-mode-hook 'emmet-mode) ;; Auto-start on any markup modes

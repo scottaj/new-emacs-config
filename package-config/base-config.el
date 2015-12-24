@@ -53,6 +53,8 @@
 
 
 ;;;; Misc useful keybindings
+;; Compilation
+(define-key evil-normal-state-map (kbd ",c") 'compile)
 
 ;; Toggle visible whitespace
 (define-key evil-normal-state-map (kbd ",w") 'whitespace-mode)
@@ -71,10 +73,10 @@
 (define-key evil-normal-state-map (kbd ",>") 'hs-hide-all)
 
 ;; Spellcheck
-(define-key evil-normal-state-map (kbd ",ce") 'flyspell-mode)
-(define-key evil-normal-state-map (kbd ",cb") 'flyspell-buffer)
-(define-key evil-normal-state-map (kbd ",cw") 'flyspell-word)
-(define-key evil-normal-state-map (kbd ",cc") 'flyspell-correct-word-before-point)
+(define-key evil-normal-state-map (kbd ",se") 'flyspell-mode)
+(define-key evil-normal-state-map (kbd ",sb") 'flyspell-buffer)
+(define-key evil-normal-state-map (kbd ",sw") 'flyspell-word)
+(define-key evil-normal-state-map (kbd ",sc") 'flyspell-correct-word-before-point)
 
 ;; Git tools
 ;; REQUIRES Magit

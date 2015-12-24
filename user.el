@@ -1,4 +1,7 @@
 ;; Custom user code that doesn't belong to a package goes here
+;; Compilation
+(setq compilation-read-command nil)
+(global-set-key (kbd "<f5>") 'comment-or-uncomment-region)
 
 
 
@@ -15,8 +18,14 @@
 
 
 
-;; Auto-scroll compilation buffer
+;; Auto-scroll and color compilation buffer
 (setq compilation-scroll-output t)
+(ignore-errors
+  (require 'ansi-color)
+  (defun my-colorize-compilation-buffer ()
+    (when (eq major-mode 'compilation-mode)
+      (ansi-color-apply-on-region compilation-filter-start (point-max))))
+  (add-hook 'compilation-filter-hook 'my-colorize-compilation-buffer))
 
 
 
@@ -82,14 +91,13 @@
 
 
 ;; Shell settings
-(when (display-graphic-p)
-	(defun set-exec-path-from-shell-PATH ()
-		(let ((path-from-shell
-					 (replace-regexp-in-string "[[:space:]\n]*$" ""
-																		 (shell-command-to-string "$SHELL -l -c 'echo $PATH'"))))
-			(setenv "PATH" path-from-shell)
-			(setq exec-path (split-string path-from-shell path-separator))))
-	(when (equal system-type 'darwin) (set-exec-path-from-shell-PATH)))
+(defun set-exec-path-from-shell-PATH ()
+  (let ((path-from-shell 
+      (replace-regexp-in-string "[[:space:]\n]*$" "" 
+        (shell-command-to-string "$SHELL -i -c 'echo $PATH'"))))
+    (setenv "PATH" path-from-shell)
+    (setq exec-path (split-string path-from-shell path-separator))))
+(when (equal system-type 'darwin) (set-exec-path-from-shell-PATH))
 
 
 
@@ -138,23 +146,23 @@
 
 (set-default 'server-socket-dir "~/.emacs.d/server")
 (if (functionp 'window-system)
-		(when (and (window-system)
-					 (>= emacs-major-version 24))
-			(server-start)))
+    (when (and (window-system)
+               (>= emacs-major-version 24))
+      (server-start)))
 
 
 
 ;; Pretty symbols
 (add-hook 'prog-mode-hook (lambda ()
-			    (setq prettify-symbols-alist '(("===" . ?≡)
-							   ("!==" . ?≢) (">=" . ?≥) ("<=" . ?≤)
-							   ("alpha" . ?α) ("beta" . ?β) ("gamma" . ?γ)
-							   ("delta" . Δ) ("epsilon" . ?ε) ("zeta" . ?ζ)
-							   ("eta" . ?η) ("theta" . ?θ) ("lambda" . ?λ)
-							   ("micro" . ?μ) ("pi" . ?π) ("rho" . ?ρ)
-							   ("sigma" . ?σ) ("phi" . ?φ) ("omega" . ?Ω)
-							   ("sqrt" . ?√) ("sum" . ∑) ("infinity" . ∞)
-							   ("Infinity" . ∞) ("=>" . ?⇒) ("->" . ?→)))))
+                            (setq prettify-symbols-alist '(("===" . ?≡)
+                                                           ("!==" . ?≢) (">=" . ?≥) ("<=" . ?≤)
+                                                           ("alpha" . ?α) ("beta" . ?β) ("gamma" . ?γ)
+                                                           ("delta" . Δ) ("epsilon" . ?ε) ("zeta" . ?ζ)
+                                                           ("eta" . ?η) ("theta" . ?θ) ("lambda" . ?λ)
+                                                           ("micro" . ?μ) ("pi" . ?π) ("rho" . ?ρ)
+                                                           ("sigma" . ?σ) ("phi" . ?φ) ("omega" . ?Ω)
+                                                           ("sqrt" . ?√) ("sum" . ∑) ("infinity" . ∞)
+                                                           ("Infinity" . ∞) ("=>" . ?⇒) ("->" . ?→)))))
 
 (defconst javascript--prettify-symbols-alist '(("function" . ?λ)
 					       ("null" . ?∅)))
