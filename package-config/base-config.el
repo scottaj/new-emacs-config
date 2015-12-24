@@ -87,8 +87,8 @@
 (define-key evil-normal-state-map (kbd ",,") 'helm-mini)
 
 ;; REQUIRES CUSTOM DEFINED FUNCTION
-(define-key evil-normal-state-map (kbd ",/") 'comment-or-uncomment-region-or-line)
-(define-key evil-visual-state-map (kbd ",/") 'comment-or-uncomment-region-or-line)
+(define-key evil-normal-state-map (kbd ",/") 'comment-or-uncomment-region)
+(define-key evil-visual-state-map (kbd ",/") 'comment-or-uncomment-region)
 
 ;; File tree navigation window
 (define-key evil-normal-state-map (kbd ",n") 'neotree-toggle)
