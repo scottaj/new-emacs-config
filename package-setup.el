@@ -22,6 +22,8 @@
                          company-statistics
                          flycheck
                          dash-at-point
+                         markdown-mode
+                         ack
                          ))
 
 (defvar javascript-packages '(

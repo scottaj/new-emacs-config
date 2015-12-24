@@ -133,6 +133,11 @@
 
 
 
+;;;; Markdown
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+
+
+
 ;;;; Neotree
 (require 'neotree)
 
