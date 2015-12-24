@@ -133,6 +133,11 @@
 
 
 
+;;;; Highlight word under cursor
+(add-hook 'prog-mode-hook '(lambda () (idle-highlight-mode t)))
+
+
+
 ;;;; Markdown
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
@@ -164,6 +169,10 @@
 (define-key neotree-mode-map (kbd "k") 'neotree-delete)
 (define-key neotree-mode-map (kbd "n") 'neotree-create-node)
 (define-key neotree-mode-map (kbd ".") 'neotree-hidden-file-toggle)
+
+
+;;;; Selectable kill ring
+(global-set-key (kbd "M-y") 'popup-kill-ring)
 
 
 

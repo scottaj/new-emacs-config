@@ -10,6 +10,7 @@
 
 (defvar base-packages '(
                          evil
+                         evil-surround
                          color-theme-sanityinc-solarized
                          magit
                          helm
@@ -24,6 +25,8 @@
                          dash-at-point
                          markdown-mode
                          ack
+                         idle-highlight-mode
+                         popup-kill-ring
                          ))
 
 (defvar javascript-packages '(
