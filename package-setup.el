@@ -22,6 +22,7 @@
                          company
                          company-statistics
                          flycheck
+                         flycheck-color-mode-line
                          dash-at-point
                          markdown-mode
                          ack
