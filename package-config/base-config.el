@@ -24,6 +24,7 @@
 ;; Set the initial evil state that certain major modes will be in.
 (evil-set-initial-state 'grep-mode 'emacs)
 (evil-set-initial-state 'special-mode 'emacs)
+(evil-set-initial-state 'neotree-mode 'emacs)
 
 ;; Clear insert state bindings.
 (setcdr evil-insert-state-map nil)
@@ -53,8 +54,10 @@
 
 
 ;;;; Misc useful keybindings
-;; Compilation
-(define-key evil-normal-state-map (kbd ",c") 'compile)
+;; Compilation/testing/etc
+(define-key evil-normal-state-map (kbd ",pc") 'projectile-compile-project)
+(define-key evil-normal-state-map (kbd ",pr") 'projectile-run-project)
+(define-key evil-normal-state-map (kbd ",pt") 'projectile-test-project)
 
 ;; Toggle visible whitespace
 (define-key evil-normal-state-map (kbd ",w") 'whitespace-mode)

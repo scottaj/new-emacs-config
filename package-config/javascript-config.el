@@ -23,6 +23,6 @@
 
 
 ;;;; Tern
-(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 (eval-after-load 'js (lambda ()
+                       (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
                        (define-key js-mode-map (kbd "s-b") 'tern-find-definition)))
