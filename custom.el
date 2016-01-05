@@ -26,6 +26,7 @@
  '(initial-major-mode (quote org-mode))
  '(initial-scratch-message nil)
  '(js2-include-node-externs t)
+ '(magit-branch-arguments nil)
  '(magit-commit-show-diff nil)
  '(magit-push-always-verify nil)
  '(magit-revert-buffers t)
