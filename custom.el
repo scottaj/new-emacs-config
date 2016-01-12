@@ -32,6 +32,7 @@
  '(magit-revert-buffers t)
  '(make-backup-files nil)
  '(nodejs-repl-arguments (quote ("--interactive")))
+ '(nyan-mode t)
  '(projectile-create-missing-test-files t)
  '(projectile-enable-caching t)
  '(projectile-global-mode t)
