@@ -47,4 +47,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(mode-line ((t (:background "#073642" :box (:line-width 1 :color "#839496") :weight normal :height 0.5))))
- '(mode-line-buffer-id ((t (:background "#073642" :foreground "#d33682")))))
+ '(mode-line-buffer-id ((t (:background "#073642" :foreground "#d33682"))))
+ '(smerge-base ((t (:background "#333300"))))
+ '(smerge-mine ((t (:background "#331111"))))
+ '(smerge-other ((t (:background "#113311"))))
+ '(smerge-refined-added ((t (:inherit smerge-refined-change :background "#224422"))))
+ '(smerge-refined-removed ((t (:inherit smerge-refined-change :background "#442222")))))
