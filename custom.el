@@ -29,7 +29,7 @@
  '(magit-branch-arguments nil)
  '(magit-commit-show-diff nil)
  '(magit-push-always-verify nil)
- '(magit-revert-buffers t t)
+ '(magit-revert-buffers t)
  '(make-backup-files nil)
  '(neo-smart-open t)
  '(nodejs-repl-arguments (quote ("--interactive")))
