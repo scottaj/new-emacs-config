@@ -42,6 +42,7 @@
                               company-tern
                               emmet-mode
                               web-mode
+                              coffee-mode
                               ))
 
 (defvar rust-packages '(
