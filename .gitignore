@@ -4,3 +4,4 @@ elpa/
 /projectile.cache
 /company-statistics-cache.el
 /helm-doc.org
+eshell/
