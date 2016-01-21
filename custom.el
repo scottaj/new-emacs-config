@@ -10,6 +10,10 @@
  '(company-auto-complete-chars (quote (32 41 119 46)))
  '(company-idle-delay 0.2)
  '(company-statistics-mode t)
+ '(compilation-auto-jump-to-first-error nil)
+ '(compilation-environment (quote ("TERM=xterm-256color")))
+ '(compilation-read-command nil)
+ '(compilation-scroll-output t)
  '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
  '(custom-safe-themes
    (quote
@@ -51,6 +55,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(compilation-error ((t (:inherit error :height 1.5))))
  '(mode-line ((t (:background "#073642" :box (:line-width 1 :color "#839496") :weight normal :height 0.5))))
  '(mode-line-buffer-id ((t (:background "#073642" :foreground "#d33682"))))
  '(smerge-base ((t (:background "#333300"))))
