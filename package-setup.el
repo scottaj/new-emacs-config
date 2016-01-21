@@ -30,6 +30,7 @@
                          idle-highlight-mode
                          popup-kill-ring
                          nyan-mode
+                         yasnippet
                          ))
 
 (defvar javascript-packages '(
@@ -43,6 +44,10 @@
                               emmet-mode
                               web-mode
                               coffee-mode
+                              angular-snippets
+                              ember-yasnippets
+                              react-snippets
+                              mocha-snippets
                               ))
 
 (defvar rust-packages '(

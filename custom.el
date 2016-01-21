@@ -41,7 +41,11 @@
  '(projectile-switch-project-action (quote helm-projectile-find-file))
  '(show-paren-mode t)
  '(show-paren-style (quote expression))
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(yas-global-mode t nil (yasnippet))
+ '(yas-snippet-dirs
+   (quote
+    ("~/.emacs.d/snippets" yas-installed-snippets-dir "/Users/ajs/.emacs.d/elpa/angular-snippets-20140513.2223/snippets" "/Users/ajs/.emacs.d/elpa/ember-yasnippets-20160111.907/snippets" "/Users/ajs/.emacs.d/elpa/react-snippets-20151104.1540/snippets" "/Users/ajs/.emacs.d/elpa/mocha-snippets-20150116.800/snippets")) nil (yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
