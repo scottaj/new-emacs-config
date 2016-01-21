@@ -59,6 +59,10 @@
 (define-key evil-normal-state-map (kbd ",pr") 'projectile-run-project)
 (define-key evil-normal-state-map (kbd ",pt") 'projectile-test-project)
 
+;;;; Searching
+(define-key evil-normal-state-map (kbd ",ap") 'helm-do-ag-project-root)
+(define-key evil-normal-state-map (kbd ",af") 'helm-do-ag-this-file)
+
 ;; Toggle visible whitespace
 (define-key evil-normal-state-map (kbd ",w") 'whitespace-mode)
 

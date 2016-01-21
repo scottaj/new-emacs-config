@@ -16,6 +16,7 @@
                          magit
                          helm
                          projectile
+                         helm-ag
                          helm-projectile
                          neotree
                          editorconfig
