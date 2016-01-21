@@ -189,3 +189,17 @@
 
 (setq-default indent-tabs-mode nil)
 (setq tab-width 3)
+
+
+
+;; Add NodeJS error format
+(require 'compile) 
+(pushnew '(node "^[  ]+at \\(?:[^\(\n]+ \(\\)?\\([a-zA-Z\.0-9_/-]+\\):\\([0-9]+\\):\\([0-9]+\\)\)?$" 1 2 3)
+            compilation-error-regexp-alist-alist)
+(setq compilation-error-regexp-alist
+      (cons 'node compilation-error-regexp-alist))
+
+(pushnew '(npm "^[  ]+at \\(?:[^\(\n]+ \(\\)?\\([a-zA-Z\.0-9_/-]+\\):\\([0-9]+\\):\\([0-9]+\\)\)?$" 1 2 3)
+            compilation-error-regexp-alist-alist)
+(setq compilation-error-regexp-alist
+      (cons 'npm compilation-error-regexp-alist))
