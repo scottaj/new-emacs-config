@@ -25,6 +25,7 @@
 (evil-set-initial-state 'grep-mode 'emacs)
 (evil-set-initial-state 'special-mode 'emacs)
 (evil-set-initial-state 'neotree-mode 'emacs)
+(evil-set-initial-state 'makey-key-mode 'emacs)
 
 ;; Clear insert state bindings.
 (setcdr evil-insert-state-map nil)
@@ -53,75 +54,18 @@
 (define-key evil-normal-state-map (kbd "C-e") 'move-end-of-line)
 
 
-;;;; Misc useful keybindings
-;; Compilation/testing/etc
-(define-key evil-normal-state-map (kbd ",pc") 'projectile-compile-project)
-(define-key evil-normal-state-map (kbd ",pr") 'projectile-run-project)
-(define-key evil-normal-state-map (kbd ",pt") 'projectile-test-project)
+(defun open-command-menu ()
+  (interactive)
+  (discover-show-context-menu 'keymap))
 
-;;;; Searching
-(define-key evil-normal-state-map (kbd ",ap") 'helm-do-ag-project-root)
-(define-key evil-normal-state-map (kbd ",af") 'helm-do-ag-this-file)
-
-;; Toggle visible whitespace
-(define-key evil-normal-state-map (kbd ",w") 'whitespace-mode)
-
-;; Open file
-(define-key evil-normal-state-map (kbd ",e") 'helm-find-files)
-
-;; Jump to file in project
-(define-key evil-normal-state-map (kbd ",T") 'helm-semantic-or-imenu)
-(define-key evil-normal-state-map (kbd ", C-t") 'projectile-invalidate-cache)
-(define-key evil-normal-state-map (kbd ",t") 'helm-projectile-find-file)
+(define-key evil-normal-state-map (kbd ",") 'open-command-menu)
 (define-key evil-normal-state-map (kbd "C-p") 'helm-show-kill-ring)
-
-;; Code Folding 
-(define-key evil-normal-state-map (kbd ",.") 'hs-toggle-hiding)
-(define-key evil-normal-state-map (kbd ",>") 'hs-hide-all)
-
-;; Spellcheck
-(define-key evil-normal-state-map (kbd ",se") 'flyspell-mode)
-(define-key evil-normal-state-map (kbd ",sb") 'flyspell-buffer)
-(define-key evil-normal-state-map (kbd ",sw") 'flyspell-word)
-(define-key evil-normal-state-map (kbd ",sc") 'flyspell-correct-word-before-point)
-
-;; Git tools
-;; REQUIRES Magit
-(define-key evil-normal-state-map (kbd ",gs") 'magit-status) ;; git control panel
-(define-key evil-normal-state-map (kbd ",gh") 'magit-file-log) ; Commit history for current file
-(define-key evil-normal-state-map (kbd ",gb") 'magit-blame-mode) ; Blame for current file
-(define-key evil-normal-state-map (kbd ",gg") 'magit-grep) ; Git grep
-
-;; Switch to another open buffer
-(define-key evil-normal-state-map (kbd ",,") 'helm-mini)
-
-;; REQUIRES CUSTOM DEFINED FUNCTION
-(define-key evil-normal-state-map (kbd ",/") 'comment-or-uncomment-region)
-(define-key evil-visual-state-map (kbd ",/") 'comment-or-uncomment-region)
-
-;; File tree navigation window
-(define-key evil-normal-state-map (kbd ",n") 'neotree-toggle)
-
-;; Prompt for snippet
-;; REQUIRES Yasnippet
-(define-key evil-normal-state-map (kbd ", SPC") (lambda ()
-                                                  (interactive)
-                                                  (evil-insert-state)
-                                                  (yas-insert-snippet)))
 
 ;; Window moving
 (define-key evil-normal-state-map (kbd "C-w <left>") 'windmove-left)
 (define-key evil-normal-state-map (kbd "C-w <right>") 'windmove-right)
 (define-key evil-normal-state-map (kbd "C-w <up>") 'windmove-up)
 (define-key evil-normal-state-map (kbd "C-w <down>") 'windmove-down)
-
-;; Find string recursively in files
-(define-key evil-normal-state-map (kbd ",f") 'ack)
-
-;; Show undo tree
-(define-key evil-normal-state-map (kbd ",u") 'undo-tree-visualize)
-;; Dash
-(define-key evil-normal-state-map (kbd ",d") 'dash-at-point)
 
 (evil-mode)
 

@@ -34,6 +34,8 @@
                          yasnippet
                          ))
 
+(defvar discover-packages '(discover))
+
 (defvar javascript-packages '(
                               js2-mode
                               js2-refactor
@@ -58,6 +60,7 @@
                         ))
 
 (defvar extra-packages (append base-packages
+                               discover-packages
                                javascript-packages
                                rust-packages
                         ))

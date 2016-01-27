@@ -23,6 +23,7 @@
  '(enable-local-variables :all)
  '(gc-cons-threshold 100000000)
  '(global-company-mode t)
+ '(global-discover-mode t)
  '(global-evil-surround-mode t)
  '(global-linum-mode t)
  '(initial-buffer-choice t)
