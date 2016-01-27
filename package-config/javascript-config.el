@@ -1,7 +1,15 @@
+(require 'js2-refactor)
+
 ;;;; JS2 mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
 
-(setq js2-global-externs '())
+(setq js2-global-externs '(
+                           "describe"
+                           "xdescribe"
+                           "it"
+                           "xit"
+                           ))
 
 
 

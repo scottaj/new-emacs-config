@@ -58,7 +58,15 @@
   (interactive)
   (discover-show-context-menu 'keymap))
 
+(defun open-language-menu ()
+  (interactive)
+  (discover-show-context-menu 'languages))
+
 (define-key evil-normal-state-map (kbd ",") 'open-command-menu)
+(define-key evil-normal-state-map (kbd "SPC") 'open-language-menu)
+(define-key evil-visual-state-map (kbd ",") 'open-command-menu)
+(define-key evil-visual-state-map (kbd "SPC") 'open-language-menu)
+
 (define-key evil-normal-state-map (kbd "C-p") 'helm-show-kill-ring)
 
 ;; Window moving

@@ -51,6 +51,7 @@
                               ember-yasnippets
                               react-snippets
                               mocha-snippets
+                              mocha
                               ))
 
 (defvar rust-packages '(

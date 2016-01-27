@@ -1,3 +1,5 @@
+(require 'js2-refactor)
+
 (defun insert-yassnippet ()
   (interactive)
   (evil-insert-state)
@@ -89,5 +91,84 @@
                 ("b" "Check current buffer" flyspell-buffer)
                 ("w" "Check-current-word" flyspell-word)
                 ("c" "Correct word" flyspell-correct-word)
+                )
+               )))
+
+
+
+;;;; Languages nav, activated by SPACE
+(defun open-javascript-menu ()
+  (interactive)
+  (discover-show-context-menu 'javascript))
+(defun open-rust-menu ()
+  (interactive)
+  (discover-show-context-menu 'rust))
+(defun open-elisp-menu ()
+  (interactive)
+  (discover-show-context-menu 'elisp))
+
+(discover-add-context-menu
+ :context-menu '(languages
+              (description "Programming language commands (q to quit)")
+              (lisp-switches)
+              (lisp-arguments)
+              (actions
+               ("Languages"
+                ("j" "JavaScript" open-javascript-menu)
+                ("r" "Rust" open-rust-menu)
+                ("e" "Emacs Lisp" open-elisp-menu)
+                )
+               )))
+
+(discover-add-context-menu
+ :context-menu '(javascript
+              (description "JavaScript (q to quit)")
+              (lisp-switches)
+              (lisp-arguments)
+              (actions
+               ("Navigation"
+                ("t" "Jump to definition" tern-pop-find-definition)
+                ("e" "Search for definition" tern-find-definition)
+                )
+               ("Testing"
+                ("s" "Test current file" mocha-test-file)
+                ("p" "Test project" mocha-test-project)
+                )
+               ("Completion"
+                ("c" "Complete at point" tern-completion-at-point)
+                ("h" "Show argument hints" tern-show-argument-hints)
+                )
+               ("Refactoring"
+                ("f" "Extract function" js2r-extract-function)
+                ("m" "Extract method" js2r-extract-method)
+                ("v" "Extract variable" js2r-extract-var)
+                ("i" "Inline variable" js2r-inline-var)
+                ("r" "Rename variable" js2r-rename-var)
+                ("a" "Contract array" js2r-contract-array)
+                ("A" "Expand array" js2r-expand-array)
+                ("o" "Contract object" js2r-contract-object)
+                ("O" "Expand object" js2r-expand-object)
+                )
+               )))
+
+(discover-add-context-menu
+ :context-menu '(rust
+              (description "Rust (q to quit)")
+              (lisp-switches)
+              (lisp-arguments)
+              (actions
+               ("Navigation"
+                ("f" "Find definition" racer-find-definition)
+                )
+               )))
+
+(discover-add-context-menu
+ :context-menu '(elisp
+              (description "Emacs Lisp (q to quit)")
+              (lisp-switches)
+              (lisp-arguments)
+              (actions
+               ("Misc"
+                ("d" "Toggle eldoc" eldoc-mode)
                 )
                )))
