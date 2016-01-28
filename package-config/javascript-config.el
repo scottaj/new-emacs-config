@@ -9,6 +9,10 @@
                            "xdescribe"
                            "it"
                            "xit"
+                           "before"
+                           "beforeEach"
+                           "after"
+                           "afterEach"
                            ))
 
 
