@@ -57,6 +57,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(compilation-error ((t (:inherit error :height 1.5))))
+ '(idle-highlight ((t (:background "#333"))))
  '(mode-line ((t (:background "#073642" :box (:line-width 1 :color "#839496") :weight normal :height 0.5))))
  '(mode-line-buffer-id ((t (:background "#073642" :foreground "#d33682"))))
  '(smerge-base ((t (:background "#333300"))))
