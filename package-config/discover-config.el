@@ -90,7 +90,7 @@
                 ("e" "Enable/disable spellcheck" flyspell-mode)
                 ("b" "Check current buffer" flyspell-buffer)
                 ("w" "Check-current-word" flyspell-word)
-                ("c" "Correct word" flyspell-correct-word)
+                ("c" "Correct word" flyspell-correct-word-before-point)
                 )
                )))
 
