@@ -100,6 +100,9 @@
 (defun open-javascript-menu ()
   (interactive)
   (discover-show-context-menu 'javascript))
+(defun open-javascript-test-menu ()
+  (interactive)
+  (discover-show-context-menu 'javascript-test))
 (defun open-rust-menu ()
   (interactive)
   (discover-show-context-menu 'rust))
@@ -127,12 +130,11 @@
               (lisp-arguments)
               (actions
                ("Navigation"
-                ("t" "Jump to definition" tern-pop-find-definition)
+                ("d" "Jump to definition" tern-pop-find-definition)
                 ("e" "Search for definition" tern-find-definition)
                 )
                ("Testing"
-                ("s" "Test current file" mocha-test-file)
-                ("p" "Test project" mocha-test-project)
+                ("t" "Open test menu" open-javascript-test-menu)
                 )
                ("Completion"
                 ("c" "Complete at point" tern-completion-at-point)
@@ -148,6 +150,19 @@
                 ("A" "Expand array" js2r-expand-array)
                 ("o" "Contract object" js2r-contract-object)
                 ("O" "Expand object" js2r-expand-object)
+                )
+               )))
+
+(discover-add-context-menu
+ :context-menu '(javascript
+              (description "JavaScript Testing (q to quit)")
+              (lisp-switches)
+              (lisp-arguments)
+              (actions
+               ("Testing"
+                ("s" "Test at point" mocha-test-at-point)
+                ("f" "Test current file" mocha-test-file)
+                ("p" "Test project" mocha-test-project)
                 )
                )))
 
