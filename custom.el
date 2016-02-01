@@ -29,7 +29,7 @@
  '(global-linum-mode t)
  '(initial-buffer-choice t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
- '(initial-major-mode (quote org-mode))
+ '(initial-major-mode (quote lisp-interaction-mode))
  '(initial-scratch-message nil)
  '(js2-include-node-externs t)
  '(magit-branch-arguments nil)
