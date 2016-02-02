@@ -25,6 +25,7 @@
  '(global-company-mode t)
  '(global-discover-mode t)
  '(global-evil-surround-mode t)
+ '(global-flycheck-mode t)
  '(global-linum-mode t)
  '(initial-buffer-choice t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
