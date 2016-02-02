@@ -44,6 +44,11 @@
                               web-mode
                               ))
 
+(defvar css-packages '(
+                              scss-mode
+                              ))
+
+
 (defvar rust-packages '(
                         rust-mode
                         flycheck-rust
@@ -52,6 +57,7 @@
 
 (defvar extra-packages (append base-packages
                                javascript-packages
+                               css-packages
                                rust-packages
                         ))
 
