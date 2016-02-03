@@ -37,6 +37,7 @@
  '(magit-push-always-verify nil)
  '(magit-revert-buffers t)
  '(make-backup-files nil)
+ '(neo-create-file-auto-open t)
  '(neo-smart-open t)
  '(nodejs-repl-arguments (quote ("--interactive")))
  '(nyan-mode t)
