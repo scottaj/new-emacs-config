@@ -37,7 +37,6 @@
 (global-set-key [escape] 'keyboard-quit)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 (define-key evil-visual-state-map [escape] 'evil-normal-state)
-(define-key evil-emacs-state-map [escape] 'evil-normal-state)
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
