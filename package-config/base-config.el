@@ -52,20 +52,6 @@
 (define-key evil-visual-state-map (kbd "C-e") 'move-end-of-line)
 (define-key evil-normal-state-map (kbd "C-e") 'move-end-of-line)
 
-
-(defun open-command-menu ()
-  (interactive)
-  (discover-show-context-menu 'keymap))
-
-(defun open-language-menu ()
-  (interactive)
-  (discover-show-context-menu 'languages))
-
-(define-key evil-normal-state-map (kbd ",") 'open-command-menu)
-(define-key evil-normal-state-map (kbd "SPC") 'open-language-menu)
-(define-key evil-visual-state-map (kbd ",") 'open-command-menu)
-(define-key evil-visual-state-map (kbd "SPC") 'open-language-menu)
-
 (define-key evil-normal-state-map (kbd "C-p") 'helm-show-kill-ring)
 
 ;; Window moving
@@ -132,6 +118,7 @@
 (define-key neotree-mode-map (kbd "k") 'neotree-delete)
 (define-key neotree-mode-map (kbd "n") 'neotree-create-node)
 (define-key neotree-mode-map (kbd ".") 'neotree-hidden-file-toggle)
+(define-key neotree-mode-map [escape] 'neotree-hide)
 
 
 ;;;; Selectable kill ring

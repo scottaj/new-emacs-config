@@ -1,4 +1,23 @@
 (require 'js2-refactor)
+(require 'makey)
+
+(defadvice makey-key-mode-get-key-map (after add-escape (arg))
+  "Add escape to all makey maps to quit them"
+  (define-key ad-return-value [escape] (lambda nil (interactive) (makey-key-mode-command nil))))
+(ad-activate 'makey-key-mode-get-key-map)
+
+(defun open-command-menu ()
+  (interactive)
+  (discover-show-context-menu 'keymap))
+
+(defun open-language-menu ()
+  (interactive)
+  (discover-show-context-menu 'languages))
+
+(define-key evil-normal-state-map (kbd ",") 'open-command-menu)
+(define-key evil-normal-state-map (kbd "SPC") 'open-language-menu)
+(define-key evil-visual-state-map (kbd ",") 'open-command-menu)
+(define-key evil-visual-state-map (kbd "SPC") 'open-language-menu)
 
 (defun insert-yassnippet ()
   (interactive)
