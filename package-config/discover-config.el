@@ -64,7 +64,7 @@
                 ("Misc"
                 ("SPC" "Expand code template" insert-yassnippet)
                 ("d" "Browse documentation" dash-at-point)
-                ("u" "Show undo tree" neotree-toggle)
+                ("u" "Show undo tree" undo-tree-visualize)
                 )
                )))
 
