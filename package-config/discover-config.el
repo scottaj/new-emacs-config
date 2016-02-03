@@ -154,7 +154,7 @@
                )))
 
 (discover-add-context-menu
- :context-menu '(javascript
+ :context-menu '(javascript-test
               (description "JavaScript Testing (q to quit)")
               (lisp-switches)
               (lisp-arguments)
