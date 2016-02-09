@@ -60,7 +60,7 @@
                 ("." "Toggle code folding" hs-toggle-hiding)
                 (">" "Fold all code" hs-hide-all)
                 ("w" "Toggle visible whitespace" whitespace-mode)
-                ("_" "Toggle word wrap" toggle-word-wrap))
+                ("_" "Toggle word wrap" toggle-truncate-lines))
 
                 ("Misc"
                 ("SPC" "Expand code template" insert-yassnippet)
