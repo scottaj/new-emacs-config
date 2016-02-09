@@ -156,6 +156,9 @@
                ("Testing"
                 ("t" "Open test menu" open-javascript-test-menu)
                 )
+               ("REPL"
+                ("R" "Open NodeJS REPL" nodejs-repl)
+                )
                ("Completion"
                 ("c" "Complete at point" tern-completion-at-point)
                 ("h" "Show argument hints" tern-show-argument-hints)
