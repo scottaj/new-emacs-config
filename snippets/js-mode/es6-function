@@ -2,4 +2,4 @@
 # name: ES6 Function
 # key: fn
 # --
-(${1:arg}) => $0
+($1) => $0
