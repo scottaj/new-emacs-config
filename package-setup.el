@@ -27,6 +27,7 @@
                          flycheck-color-mode-line
                          dash-at-point
                          markdown-mode
+                         ag
                          ack
                          idle-highlight-mode
                          popup-kill-ring

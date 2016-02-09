@@ -50,9 +50,10 @@
                ("File"
                 ("," "switch to another open file" helm-mini)
                 ("t" "Find file in project" helm-projectile-find-file)
-                ("T" "Clear project file cache" projectile-invalidate-cache)
                 ("e" "Find file in current directory" helm-find-files)
-                ("n" "Open directory browser" neotree-toggle))
+                ("a" "Grep project" projectile-ag)
+                ("n" "Open directory browser" neotree-toggle)
+                ("T" "Clear project file cache" projectile-invalidate-cache))
 
                ("Text manipulation"
                 ("/" "Comment current line or region" comment-or-uncomment-region)
