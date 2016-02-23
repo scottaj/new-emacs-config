@@ -92,6 +92,8 @@
  '(idle-highlight ((t (:background "#333"))))
  '(mode-line ((t (:background "#282a36" :box (:line-width 1 :color "#839496") :weight normal :height 0.5))))
  '(mode-line-buffer-id ((t (:background "#073642" :foreground "#d33682"))))
+ '(region ((t (:background "#44475a" :foreground nil))))
+ '(show-paren-match ((t (:background "#44475a"))))
  '(smerge-base ((t (:background "#333300"))))
  '(smerge-mine ((t (:background "#331111"))))
  '(smerge-other ((t (:background "#113311"))))
