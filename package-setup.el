@@ -56,8 +56,8 @@
                               ))
 
 (defvar css-packages '(
-                              scss-mode
-                              ))
+                       scss-mode
+                       ))
 
 
 (defvar rust-packages '(
