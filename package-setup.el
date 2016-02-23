@@ -12,7 +12,7 @@
 (defvar base-packages '(
                          evil
                          evil-surround
-                         color-theme-sanityinc-solarized
+                         dracula-theme
                          magit
                          helm
                          projectile
