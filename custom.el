@@ -8,7 +8,7 @@
  '(ansi-color-faces-vector
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
-   (vector "#839496" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#002b36"))
+   ["#839496" "#ff5555" "#50fa7b" "#ffb86c" "#8be9fd" "#ff79c6" "#2aa198" "#bd93f9"])
  '(column-number-mode t)
  '(company-auto-complete nil)
  '(company-auto-complete-chars (quote (32 41 119 46)))
@@ -89,6 +89,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(compilation-error ((t (:inherit error :height 1.5))))
+ '(compilation-mode-line-exit ((t (:inherit compilation-info :foreground "#50fa7b" :weight bold :height 0.5))))
+ '(compilation-mode-line-fail ((t (:inherit compilation-error :weight bold :height 0.5))))
+ '(compilation-mode-line-run ((t (:inherit compilation-warning :height 0.5))))
+ '(error ((t (:foreground "#ff5555" :weight bold))))
  '(flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :background "#ff5555" :weight normal))))
  '(flycheck-color-mode-line-warning-face ((t (:inherit flycheck-fringe-warning :background "#ffb86c" :weight normal))))
  '(idle-highlight ((t (:background "#333"))))
@@ -100,4 +104,5 @@
  '(smerge-mine ((t (:background "#331111"))))
  '(smerge-other ((t (:background "#113311"))))
  '(smerge-refined-added ((t (:inherit smerge-refined-change :background "#224422"))))
- '(smerge-refined-removed ((t (:inherit smerge-refined-change :background "#442222")))))
+ '(smerge-refined-removed ((t (:inherit smerge-refined-change :background "#442222"))))
+ '(success ((t (:foreground "#50fa7b" :weight bold)))))
