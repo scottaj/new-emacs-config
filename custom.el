@@ -89,6 +89,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(compilation-error ((t (:inherit error :height 1.5))))
+ '(flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :background "#ff5555" :weight normal))))
+ '(flycheck-color-mode-line-warning-face ((t (:inherit flycheck-fringe-warning :background "#ffb86c" :weight normal))))
  '(idle-highlight ((t (:background "#333"))))
  '(mode-line ((t (:background "#282a36" :box (:line-width 1 :color "#839496") :weight normal :height 0.5))))
  '(mode-line-buffer-id ((t (:background "#073642" :foreground "#d33682"))))
