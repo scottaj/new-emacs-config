@@ -144,11 +144,13 @@
 
 
 
-(set-default 'server-socket-dir "~/.emacs.d/server")
-(if (functionp 'window-system)
-    (when (and (window-system)
-               (>= emacs-major-version 24))
-      (server-start)))
+;;
+;; Start named Emacs server for emacsclient connections
+;;
+(require 'server)
+(unless (server-running-p "emacs-server")
+  (set 'server-name "emacs-server")
+  (server-start))
 
 
 
