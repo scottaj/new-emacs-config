@@ -53,6 +53,7 @@
                               react-snippets
                               mocha-snippets
                               mocha
+                              realgud
                               ))
 
 (defvar css-packages '(
