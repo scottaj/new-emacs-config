@@ -186,6 +186,9 @@
                 ("s" "Test at point" mocha-test-at-point)
                 ("f" "Test current file" mocha-test-file)
                 ("p" "Test project" mocha-test-project)
+                ("S" "Debug at point" mocha-debug-at-point)
+                ("F" "Debug current file" mocha-debug-file)
+                ("P" "Debug project" mocha-debug-project)
                 )
                )))
 
