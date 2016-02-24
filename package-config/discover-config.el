@@ -211,5 +211,6 @@
               (actions
                ("Misc"
                 ("d" "Toggle eldoc" eldoc-mode)
+                ("D" "Debug current defun" edebug-defun)
                 )
                )))
