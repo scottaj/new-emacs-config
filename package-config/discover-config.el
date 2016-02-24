@@ -52,8 +52,7 @@
                 ("t" "Find file in project" helm-projectile-find-file)
                 ("e" "Find file in current directory" helm-find-files)
                 ("a" "Grep project" projectile-ag)
-                ("n" "Open directory browser" neotree-toggle)
-                ("T" "Clear project file cache" projectile-invalidate-cache))
+                ("n" "Open directory browser" neotree-toggle))
 
                ("Text manipulation"
                 ("/" "Comment current line or region" comment-or-uncomment-region)
@@ -97,6 +96,7 @@
                 ("f" "Search current file" helm-do-ag-this-file)
                 ("!" "Run shell command" projectile-run-shell-command-in-root)
                 ("&" "Run aync shell command" projectile-run-async-shell-command-in-root)
+                ("C" "Clear project file cache" projectile-invalidate-cache)
                 )
                )))
 
