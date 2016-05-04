@@ -30,6 +30,9 @@
 (defun open-project-menu ()
   (interactive)
   (discover-show-context-menu 'project))
+(defun open-search-menu ()
+  (interactive)
+  (discover-show-context-menu 'search))
 (defun open-flyspell-menu ()
   (interactive)
   (discover-show-context-menu 'flyspell))
@@ -38,14 +41,15 @@
 ;;;; Main nav, activated by ,
 (discover-add-context-menu
  :context-menu '(keymap
-              (description "Top level commands (q to quit)")
+              (description "Top level commands")
               (lisp-switches)
               (lisp-arguments)
               (actions
                ("Sub Menu"
                 ("p" "Project commands" open-project-menu)
                 ("g" "Git commands" open-git-menu)
-                ("s" "Spellcheck commands" open-flyspell-menu))
+                ("s" "Search commands" open-search-menu)
+                ("c" "Spellcheck commands" open-flyspell-menu))
 
                ("File"
                 ("," "switch to another open file" helm-mini)
@@ -70,21 +74,21 @@
 
 (discover-add-context-menu
  :context-menu '(git
-              (description "Git commands (q to quit)")
+              (description "Git commands")
               (lisp-switches)
               (lisp-arguments)
               (actions
                ("Git"
                 ("s" "Show git status" magit-status)
                 ("g" "Git grep" vc-git-grep)
-                ("b" "Blame current file (q to quit)" magit-blame)
+                ("b" "Blame current file" magit-blame)
                 ("h" "History for current file" magit-log-buffer-file)
                 )
                )))
 
 (discover-add-context-menu
  :context-menu '(project
-              (description "Project commands (q to quit)")
+              (description "Project commands")
               (lisp-switches)
               (lisp-arguments)
               (actions
@@ -101,8 +105,23 @@
                )))
 
 (discover-add-context-menu
+ :context-menu '(search
+              (description "Search commands")
+              (lisp-switches)
+              (lisp-arguments)
+              (actions
+               ("Search"
+                ("g" "Search Google" engine/search-google)
+                ("s" "Search Stack Overflow" engine/search-stack-overflow)
+                ("w" "Search Wikipedia" engine/search-wikipedia)
+                ("a" "Search Wolfram Alpha" engine/search-wolfram-alpha)
+                ("d" "Search DuckDuckGo (in Emacs)" engine/search-duckduckgo)
+                )
+               )))
+
+(discover-add-context-menu
  :context-menu '(flyspell
-              (description "Spellcheck commands (q to quit)")
+              (description "Spellcheck commands")
               (lisp-switches)
               (lisp-arguments)
               (actions
@@ -132,7 +151,7 @@
 
 (discover-add-context-menu
  :context-menu '(languages
-              (description "Programming language commands (q to quit)")
+              (description "Programming language commands")
               (lisp-switches)
               (lisp-arguments)
               (actions
@@ -145,7 +164,7 @@
 
 (discover-add-context-menu
  :context-menu '(javascript
-              (description "JavaScript (q to quit)")
+              (description "JavaScript")
               (lisp-switches)
               (lisp-arguments)
               (actions
@@ -174,7 +193,7 @@
 
 (discover-add-context-menu
  :context-menu '(javascript-test
-              (description "JavaScript Testing (q to quit)")
+              (description "JavaScript Testing")
               (lisp-switches)
               (lisp-arguments)
               (actions
@@ -190,7 +209,7 @@
 
 (discover-add-context-menu
  :context-menu '(rust
-              (description "Rust (q to quit)")
+              (description "Rust")
               (lisp-switches)
               (lisp-arguments)
               (actions
@@ -201,7 +220,7 @@
 
 (discover-add-context-menu
  :context-menu '(elisp
-              (description "Emacs Lisp (q to quit)")
+              (description "Emacs Lisp")
               (lisp-switches)
               (lisp-arguments)
               (actions

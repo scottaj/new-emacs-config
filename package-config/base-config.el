@@ -137,3 +137,21 @@
 ;;;; Undo tree
 (global-set-key (kbd "s-z") 'undo-tree-undo)
 (global-set-key (kbd "s-y") 'undo-tree-redo)
+
+
+
+;;;; Search engines
+(require 'engine-mode)
+(engine-mode t)
+
+(defengine duckduckgo "https://duckduckgo.com/html/?q=%s"
+  :browser 'eww-browse-url)
+
+(defengine google "http://www.google.com/search?ie=utf-8&oe=utf-8&q=%s")
+
+(defengine stack-overflow
+  "https://stackoverflow.com/search?q=%s")
+
+(defengine wikipedia "http://www.wikipedia.org/search-redirect.php?language=en&go=Go&search=%s")
+
+(defengine wolfram-alpha "http://www.wolframalpha.com/input/?i=%s")

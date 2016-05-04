@@ -33,6 +33,7 @@
                          popup-kill-ring
                          nyan-mode
                          yasnippet
+                         engine-mode
                          ))
 
 (defvar discover-packages '(discover))
