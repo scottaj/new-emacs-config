@@ -156,19 +156,15 @@
                ("Testing"
                 ("t" "Open test menu" open-javascript-test-menu)
                 )
-               ("REPL"
+               ("Run"
                 ("R" "Open NodeJS REPL" nodejs-repl)
+                ("r" "Run NPM script" npm-run)
                 )
                ("Completion"
                 ("c" "Complete at point" tern-completion-at-point)
                 ("h" "Show argument hints" tern-show-argument-hints)
                 )
                ("Refactoring"
-                ("f" "Extract function" js2r-extract-function)
-                ("m" "Extract method" js2r-extract-method)
-                ("v" "Extract variable" js2r-extract-var)
-                ("i" "Inline variable" js2r-inline-var)
-                ("r" "Rename variable" js2r-rename-var)
                 ("a" "Contract array" js2r-contract-array)
                 ("A" "Expand array" js2r-expand-array)
                 ("o" "Contract object" js2r-contract-object)

@@ -215,3 +215,8 @@
       scroll-down-aggressively 0.01)
     (setq-default scroll-up-aggressively 0.01
       scroll-down-aggressively 0.01)
+
+
+;; Limit compilation buffer size
+(add-hook 'compilation-filter-hook 'comint-truncate-buffer)
+(setq comint-buffer-maximum-size 500)
