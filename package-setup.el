@@ -24,6 +24,7 @@
                          company
                          company-statistics
                          flycheck
+                         flycheck-cask
                          flycheck-color-mode-line
                          dash-at-point
                          markdown-mode
@@ -34,6 +35,8 @@
                          nyan-mode
                          yasnippet
                          engine-mode
+                         feature-mode
+                         emojify
                          ))
 
 (defvar discover-packages '(discover))

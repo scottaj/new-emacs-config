@@ -1,7 +1,7 @@
 ;;;; Company Mode
 (add-hook 'after-init-hook 'global-company-mode)
 (global-set-key (kbd "M-SPC") #'company-complete)
-
+(add-hook 'after-init-hook 'company-statistics-mode)
 
 
 ;;;; Editorconfig
@@ -67,6 +67,8 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (eval-after-load "flycheck"
   '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-cask-setup))
 
 
 
@@ -155,3 +157,8 @@
 (defengine wikipedia "http://www.wikipedia.org/search-redirect.php?language=en&go=Go&search=%s")
 
 (defengine wolfram-alpha "http://www.wolframalpha.com/input/?i=%s")
+
+
+
+;;;; Emoji
+(add-hook 'after-init-hook #'global-emojify-mode)
