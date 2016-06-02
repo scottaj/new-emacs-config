@@ -1,4 +1,5 @@
 (require 'js2-refactor)
+(require 'tern)
 
 ;;;; JS2 mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -36,9 +37,22 @@
 
 
 ;;;; Tern
+;; Combine Tern and dumb-jump
+(defun js-jump ()
+  (interactive)
+  (let ((current-file (buffer-file-name (current-buffer)))
+        (current-line (what-line)))
+    (tern-find-definition)
+    (if (and (equal (buffer-file-name (current-buffer)) current-file)
+             (equal (what-line) current-line))
+        (dumb-jump-go)
+      (message "Can't jump to definition"))))
+
 (eval-after-load 'js (lambda ()
                        (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
-                       (define-key js-mode-map (kbd "s-b") 'tern-find-definition)))
+                       (define-key js-mode-map (kbd "s-b") 'js-jump)))
+
+
 
 
 

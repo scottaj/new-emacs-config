@@ -162,3 +162,9 @@
 
 ;;;; Emoji
 (add-hook 'after-init-hook #'global-emojify-mode)
+
+
+
+
+;;;; Dumb jump
+(dumb-jump-mode t)

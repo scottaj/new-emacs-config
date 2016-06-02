@@ -24,7 +24,7 @@
  '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
-    ("959a77d21e6f15c5c63d360da73281fdc40db3e9f94e310fc1e8213f665d0278" "8577da1641ed4bdf255341ca92e3d0e49c9f4d574458f09ce78159690442cade" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+    ("1bacdd5d24f187f273f488a23c977f26452dffbc82d4ac57250aa041f14159da" "959a77d21e6f15c5c63d360da73281fdc40db3e9f94e310fc1e8213f665d0278" "8577da1641ed4bdf255341ca92e3d0e49c9f4d574458f09ce78159690442cade" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(electric-layout-mode nil)
  '(electric-pair-mode t)
  '(enable-local-variables :all)

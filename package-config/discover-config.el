@@ -36,6 +36,9 @@
 (defun open-flyspell-menu ()
   (interactive)
   (discover-show-context-menu 'flyspell))
+(defun open-dumb-jump-menu ()
+  (interactive)
+  (discover-show-context-menu 'dumb-jump))
 
 
 ;;;; Main nav, activated by ,
@@ -48,6 +51,7 @@
                ("Sub Menu"
                 ("p" "Project commands" open-project-menu)
                 ("g" "Git commands" open-git-menu)
+                ("j" "Source Code Navigation" open-dumb-jump-menu)
                 ("s" "Search commands" open-search-menu)
                 ("c" "Spellcheck commands" open-flyspell-menu))
 
@@ -83,6 +87,19 @@
                 ("g" "Git grep" vc-git-grep)
                 ("b" "Blame current file" magit-blame)
                 ("h" "History for current file" magit-log-buffer-file)
+                )
+               )))
+
+(discover-add-context-menu
+ :context-menu '(dumb-jump
+              (description "Souce code navigation commands")
+              (lisp-switches)
+              (lisp-arguments)
+              (actions
+               ("Dumb Jump"
+                ("j" "Jump to definition" dumb-jump-go)
+                ("b" "Jump back" dumb-jump-back)
+                ("p" "Preview jump" dumb-jump-quick-look)
                 )
                )))
 

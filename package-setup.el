@@ -37,6 +37,7 @@
                          engine-mode
                          feature-mode
                          emojify
+                         dumb-jump
                          ))
 
 (defvar discover-packages '(discover))
