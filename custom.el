@@ -24,11 +24,14 @@
  '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
-    ("1bacdd5d24f187f273f488a23c977f26452dffbc82d4ac57250aa041f14159da" "959a77d21e6f15c5c63d360da73281fdc40db3e9f94e310fc1e8213f665d0278" "8577da1641ed4bdf255341ca92e3d0e49c9f4d574458f09ce78159690442cade" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+    ("a4df5d4a4c343b2712a8ed16bc1488807cd71b25e3108e648d4a26b02bc990b3" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "d9129a8d924c4254607b5ded46350d68cc00b6e38c39fc137c3cfb7506702c12" "1bacdd5d24f187f273f488a23c977f26452dffbc82d4ac57250aa041f14159da" "959a77d21e6f15c5c63d360da73281fdc40db3e9f94e310fc1e8213f665d0278" "8577da1641ed4bdf255341ca92e3d0e49c9f4d574458f09ce78159690442cade" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(electric-layout-mode nil)
  '(electric-pair-mode t)
  '(enable-local-variables :all)
  '(fci-rule-color "#073642")
+ '(fsharp-continuation-offset 2)
+ '(fsharp-indent-level 2)
+ '(fsharp-indent-offset 2)
  '(gc-cons-threshold 100000000)
  '(global-company-mode t)
  '(global-discover-mode t)
@@ -44,7 +47,6 @@
  '(initial-scratch-message nil)
  '(js-indent-level 2)
  '(js-switch-indent-offset 4)
- '(js2-basic-offset 2)
  '(js2-include-node-externs t)
  '(js2-indent-switch-body t)
  '(magit-branch-arguments nil)
@@ -56,6 +58,9 @@
  '(neo-smart-open t)
  '(nodejs-repl-arguments (quote ("--interactive")))
  '(nyan-mode t)
+ '(package-selected-packages
+   (quote
+    (docker-compose-mode dockerfile-mode web-mode scss-mode realgud react-snippets racer popup-kill-ring nyan-mode nvm nodejs-repl neotree mocha-snippets mocha markdown-mode magit linum-relative json-mode js2-refactor idle-highlight-mode hideshowvis helm-projectile helm-ag fsharp-mode flycheck-rust flycheck-color-mode-line flycheck-cask feature-mode evil-surround engine-mode emojify emmet-mode ember-yasnippets editorconfig dumb-jump dracula-theme discover dash-at-point company-tern company-statistics coffee-mode angular-snippets ag ack)))
  '(projectile-create-missing-test-files t)
  '(projectile-enable-caching t)
  '(projectile-global-mode t)

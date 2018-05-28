@@ -14,13 +14,13 @@
                          evil-surround
                          dracula-theme
                          magit
+                         magithub
                          helm
                          projectile
                          helm-ag
                          helm-projectile
                          neotree
                          editorconfig
-                         hideshowvis
                          company
                          company-statistics
                          flycheck
@@ -38,6 +38,7 @@
                          feature-mode
                          emojify
                          dumb-jump
+                         linum-relative
                          ))
 
 (defvar discover-packages '(discover))
@@ -72,11 +73,16 @@
                         racer
                         ))
 
+(defvar fsharp-packages '(
+                          fsharp-mode
+                          ))
+
 (defvar extra-packages (append base-packages
                                discover-packages
                                javascript-packages
                                css-packages
                                rust-packages
+                               fsharp-packages
                         ))
 
 (defun extra-packages-installed-p ()

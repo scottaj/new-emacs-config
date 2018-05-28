@@ -141,6 +141,8 @@
 
 
 (global-set-key (kbd "C-=") 'yas-expand)
+(global-set-key (kbd "s-b") 'dumb-jump-go)
+(global-set-key (kbd "M-s <left>") 'dumb-jump-back)
 
 
 

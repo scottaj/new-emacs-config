@@ -5,3 +5,10 @@ elpa/
 /company-statistics-cache.el
 /helm-doc.org
 eshell/
+.cask
+/.mc-lists.el
+elpa-old/
+emojis
+games
+npm-debug.log
+url/

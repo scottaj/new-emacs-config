@@ -1,3 +1,6 @@
+;;;; magit
+(require 'magithub)
+
 ;;;; Company Mode
 (add-hook 'after-init-hook 'global-company-mode)
 (global-set-key (kbd "M-SPC") #'company-complete)
@@ -6,7 +9,9 @@
 
 ;;;; Editorconfig
 (require 'editorconfig)
-(editorconfig-mode 1)
+(editorconfig-mode t)
+(add-hook 'prog-mode-hook 'editorconfig-mode-apply)
+(add-hook 'text-mode-hook 'editorconfig-mode-apply)
 
 
 ;;;; Evil
@@ -26,6 +31,7 @@
 (evil-set-initial-state 'special-mode 'emacs)
 (evil-set-initial-state 'neotree-mode 'emacs)
 (evil-set-initial-state 'makey-key-mode 'emacs)
+(evil-set-initial-state 'text-mode 'normal)
 
 ;; Clear insert state bindings.
 (setcdr evil-insert-state-map nil)
@@ -75,12 +81,6 @@
 ;;;; Helm
 (global-set-key (kbd "M-x") 'helm-M-x)
 
-
-
-;;;; Hideshow
-(add-hook 'prog-mode-hook (lambda ()
-                            (hs-minor-mode)
-                            (hideshowvis-minor-mode)))
 
 
 
@@ -168,3 +168,10 @@
 
 ;;;; Dumb jump
 (dumb-jump-mode t)
+
+
+
+
+;;;; Line numbers
+(global-display-line-numbers-mode)
+(linum-mode nil)
