@@ -9,6 +9,8 @@
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
    ["#839496" "#ff5555" "#50fa7b" "#ffb86c" "#8be9fd" "#ff79c6" "#2aa198" "#bd93f9"])
+ '(auth-source-debug t)
+ '(auth-sources (quote ("/Users/ajs/.authinfo")))
  '(column-number-mode t)
  '(company-auto-complete nil)
  '(company-auto-complete-chars (quote (32 41 119 46)))
@@ -24,11 +26,13 @@
  '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
-    ("a4df5d4a4c343b2712a8ed16bc1488807cd71b25e3108e648d4a26b02bc990b3" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "d9129a8d924c4254607b5ded46350d68cc00b6e38c39fc137c3cfb7506702c12" "1bacdd5d24f187f273f488a23c977f26452dffbc82d4ac57250aa041f14159da" "959a77d21e6f15c5c63d360da73281fdc40db3e9f94e310fc1e8213f665d0278" "8577da1641ed4bdf255341ca92e3d0e49c9f4d574458f09ce78159690442cade" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+    ("947190b4f17f78c39b0ab1ea95b1e6097cc9202d55c73a702395fc817f899393" "274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" "aaffceb9b0f539b6ad6becb8e96a04f2140c8faa1de8039a343a4f1e009174fb" "a4df5d4a4c343b2712a8ed16bc1488807cd71b25e3108e648d4a26b02bc990b3" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "d9129a8d924c4254607b5ded46350d68cc00b6e38c39fc137c3cfb7506702c12" "1bacdd5d24f187f273f488a23c977f26452dffbc82d4ac57250aa041f14159da" "959a77d21e6f15c5c63d360da73281fdc40db3e9f94e310fc1e8213f665d0278" "8577da1641ed4bdf255341ca92e3d0e49c9f4d574458f09ce78159690442cade" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(electric-layout-mode nil)
  '(electric-pair-mode t)
  '(enable-local-variables :all)
  '(fci-rule-color "#073642")
+ '(flycheck-python-pycompile-executable "/usr/local/bin/python3")
+ '(flycheck-python-pylint-executable "/usr/local/bin/python3")
  '(fsharp-continuation-offset 2)
  '(fsharp-indent-level 2)
  '(fsharp-indent-offset 2)
@@ -100,6 +104,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#282a36" :foreground "#f8f8f2" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 240 :width normal :foundry "nil" :family "Source Code Pro for Powerline"))))
  '(compilation-error ((t (:inherit error :height 1.5))))
  '(compilation-mode-line-exit ((t (:inherit compilation-info :foreground "#50fa7b" :weight bold :height 0.5))))
  '(compilation-mode-line-fail ((t (:inherit compilation-error :weight bold :height 0.5))))
@@ -113,8 +118,8 @@
  '(region ((t (:background "#44475a" :foreground nil))))
  '(show-paren-match ((t (:background "#44475a"))))
  '(smerge-base ((t (:background "#333300"))))
- '(smerge-mine ((t (:background "#331111"))))
- '(smerge-other ((t (:background "#113311"))))
+ '(smerge-lower ((t (:background "#113311"))))
  '(smerge-refined-added ((t (:inherit smerge-refined-change :background "#224422"))))
  '(smerge-refined-removed ((t (:inherit smerge-refined-change :background "#442222"))))
+ '(smerge-upper ((t (:background "#331111"))))
  '(success ((t (:foreground "#50fa7b" :weight bold)))))

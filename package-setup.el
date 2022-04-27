@@ -4,17 +4,17 @@
 
 (setq package-archives '(
                          ("melpa-stable" . "http://stable.melpa.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("gnu" . "https://elpa.gnu.org/packages/")
                          ("melpa" . "http://melpa.org/packages/")
                          ))
 
 (defvar base-packages '(
                          evil
+			 evil-collection
                          evil-surround
                          dracula-theme
                          magit
-                         magithub
+			 forge
                          helm
                          projectile
                          helm-ag

@@ -1,6 +1,3 @@
-;;;; magit
-(require 'magithub)
-
 ;;;; Company Mode
 (add-hook 'after-init-hook 'global-company-mode)
 (global-set-key (kbd "M-SPC") #'company-complete)
@@ -15,7 +12,11 @@
 
 
 ;;;; Evil
+(setq evil-want-integration t) ;; This is optional since it's already set to t by default.
+(setq evil-want-keybinding nil)
 (require 'evil)
+(when (require 'evil-collection nil t)
+  (evil-collection-init))
 
 ;; Change cursor in different modes.
 (setq evil-default-cursor 'bar)
@@ -67,7 +68,6 @@
 (define-key evil-normal-state-map (kbd "C-w <down>") 'windmove-down)
 
 (evil-mode)
-
 
 ;;;; Flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
