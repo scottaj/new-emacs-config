@@ -49,8 +49,6 @@
                               json-mode
                               nodejs-repl
                               nvm
-                              tern
-                              company-tern
                               emmet-mode
                               web-mode
                               coffee-mode
