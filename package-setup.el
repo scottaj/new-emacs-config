@@ -8,80 +8,72 @@
                          ("melpa" . "http://melpa.org/packages/")
                          ))
 
-(defvar base-packages '(
-                         evil
-			 evil-collection
-                         evil-surround
-                         dracula-theme
-                         magit
-			 forge
-                         helm
-                         projectile
-                         helm-ag
-                         helm-projectile
-                         neotree
-                         editorconfig
-                         company
-                         company-statistics
-                         flycheck
-                         flycheck-cask
-                         flycheck-color-mode-line
-                         dash-at-point
-                         markdown-mode
-                         ag
-                         ack
-                         idle-highlight-mode
-                         popup-kill-ring
-                         nyan-mode
-                         yasnippet
-                         engine-mode
-                         feature-mode
-                         emojify
-                         dumb-jump
-                         linum-relative
-                         ))
+(defvar base-packages
+  '(
+    evil
+    evil-collection
+    evil-surround
+    dracula-theme
+    magit
+    forge
+    helm
+    projectile
+    helm-ag
+    helm-projectile
+    neotree
+    editorconfig
+    company
+    company-statistics
+    flycheck
+    flycheck-cask
+    flycheck-color-mode-line
+    dash-at-point
+    markdown-mode
+    ag
+    ack
+    idle-highlight-mode
+    popup-kill-ring
+    nyan-mode
+    yasnippet
+    engine-mode
+    feature-mode
+    emojify
+    dumb-jump
+    linum-relative
+    ))
 
 (defvar discover-packages '(discover))
 
-(defvar javascript-packages '(
-                              js2-mode
-                              js2-refactor
-                              json-mode
-                              nodejs-repl
-                              nvm
-                              emmet-mode
-                              web-mode
-                              coffee-mode
-                              angular-snippets
-                              ember-yasnippets
-                              react-snippets
-                              mocha-snippets
-                              mocha
-                              realgud
-                              ))
+(defvar javascript-packages
+  '(
+    js2-mode
+    js2-refactor
+    json-mode
+    nodejs-repl
+    nvm
+    emmet-mode
+    web-mode
+    coffee-mode
+    angular-snippets
+    ember-yasnippets
+    react-snippets
+    mocha-snippets
+    mocha
+    realgud
+    ))
 
-(defvar css-packages '(
-                       scss-mode
-                       ))
+(defvar css-packages
+  '(
+    scss-mode
+    ))
 
 
-(defvar rust-packages '(
-                        rust-mode
-                        flycheck-rust
-                        racer
-                        ))
-
-(defvar fsharp-packages '(
-                          fsharp-mode
-                          ))
-
-(defvar extra-packages (append base-packages
-                               discover-packages
-                               javascript-packages
-                               css-packages
-                               rust-packages
-                               fsharp-packages
-                        ))
+(defvar extra-packages
+  (append base-packages
+          discover-packages
+          javascript-packages
+          css-packages
+          ))
 
 (defun extra-packages-installed-p ()
   (dolist (p extra-packages)
